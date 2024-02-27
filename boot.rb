@@ -19,8 +19,6 @@ Dotenv.load
 loader = Zeitwerk::Loader.new
 loader.push_dir('app/lib')
 loader.push_dir('app/models')
-loader.push_dir('app/workers')
-loader.push_dir('app/serializer')
 loader.push_dir('app/')
 loader.setup
 

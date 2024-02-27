@@ -1,0 +1,4 @@
+# @name Healtcheck
+
+GET {{app}}/
+Content-Type: application/json
