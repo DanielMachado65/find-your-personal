@@ -1,0 +1,23 @@
+production:
+  clients:
+    default:
+      database: find-your-personal
+      uri: <%= ENV['MONGODB_URI'] %>
+      options:
+        server_selection_timeout: 5
+development:
+  clients:
+    default:
+      database: find-your-personal-dev
+      hosts:
+        - <%= ENV['MONGODB_HOST'] || 'localhost' %>:27017
+test:
+  clients:
+    default:
+      database: questions-test
+      hosts:
+        - mongodb:27017
+      options:
+        read: primary
+        max_retries: 1
+        retry_interval: 0

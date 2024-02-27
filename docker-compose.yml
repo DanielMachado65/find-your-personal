@@ -12,14 +12,8 @@ services:
       args:
         - environment=development
       dockerfile: ./devops/docker/Dockerfile
-    environment:
-      - APP_PORT=9393
-      - RACK_ENV=development
-      - MONGODB_HOST=mongodb
     volumes:
       - .:/app
-    ports:
-      - "${APP_PORT}:${APP_PORT}"
     depends_on:
       - mongodb
     networks:
